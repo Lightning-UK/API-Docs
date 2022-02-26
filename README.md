@@ -2,20 +2,33 @@
 
 Product Owners are eligible to purchase our extended API for £10 or $13 (one time payment, forever) and be able to use our Booster, Ranking and Roblox to Discord API.  
 
+In line with our Terms of Service and Privacy Policy.
+
 ## API Keys
 
-API Keys must be kept private and stored carefully.  We automatically generate your key upon payment.  You are entitled to have this changed by our Support Team in the event of leakage.
+API Keys must be kept private and stored carefully.  We automatically generate your secure key upon payment.  You are entitled to have this changed by our Support Team in the event of leakage or if you think you need it changed.
 
 ## Ratelimits
 
-Requests are rate limited by 250 requests in a 10 second window.  This could be changed at any time.
+This is a paid product therefore we want to give users the most maximum and efficient number of requests possible.  Ratelimits are measured through Internet Protocols.  You can send 250 requests within a 10 second window.
+
+## Support
+
+You can contact our 24/7 support team via discord.gg/lightning should you have any problems or concerns.
+
 
 ## Features
 
-- Retrieve a Discord account by providing a Roblox user ID
-- Update a group member's rank
+- Use our database with over tens of thousands of verification records to reversefind Roblox > Discord
+- Update your group members roblox ranks
 - Retrieve an array of discord server boosters
 
+
+## Use Cases
+
+- Create a rank GUI in your Roblox game
+- Create a filter that blocks unverified users from accessing your game
+- Use the reversefind API to give users booster perks in your game
 
 
 # *Endpoints*
@@ -31,8 +44,8 @@ Requests are rate limited by 250 requests in a 10 second window.  This could be 
 #### Javascript
 ```javascript
 fetch(`https://api.lightningbot.net/v1/boosters/743236357274468483?key=X2y3t5O2l4owEIhahXvx`, {
-method: 'GET',
-headers: { 'Content-Type':'application/json' }
+  method: 'GET',
+  headers: { 'Content-Type':'application/json' }
 }).then(response => response.json()).then(json => {
 // json.boosters
 })
@@ -87,10 +100,10 @@ local BoosterArray = Lightning:retrieveBoosters("743236357274468483")
 #### Javascript
 ```javascript
 fetch(`https://api.lightningbot.net/v1/verifications/82088531?key=X2y3t5O2l4owEIhahXvx`, {
-method: 'GET',
-headers: { 'Content-Type':'application/json' }
+  method: 'GET',
+  headers: { 'Content-Type':'application/json' }
 }).then(response => response.json()).then(json => {
-// json.user
+  // json.user
 })
 ```
 #### Roblox Module
@@ -117,7 +130,6 @@ local DiscordUser = Lightning:robloxToDiscord("82088531")
 {
   success: false,
   reason: "There is no account linked with this Roblox user",
-  boosters: []
 }
 ```
 
@@ -144,13 +156,13 @@ local DiscordUser = Lightning:robloxToDiscord("82088531")
 #### Javascript
 ```javascript
 fetch(`https://api.lightningbot.net/v1/roblox/rank?key=X2y3t5O2l4owEIhahXvx`, {
-method: 'GET',
-body: JSON.stringify({
-  robloxId: "82088531",
-  rankId: "254",
-  guildId: "743236357274468483"
-})
-headers: { 'Content-Type':'application/json' }
+  method: 'GET',
+  body: JSON.stringify({
+    robloxId: "82088531",
+    rankId: "254",
+    guildId: "743236357274468483"
+  })
+  headers: { 'Content-Type':'application/json' }
 }).then(response => response.json()).then(json => {
 
 })
