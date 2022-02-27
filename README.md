@@ -31,6 +31,19 @@ You can contact our 24/7 support team via discord.gg/lightning should you have a
 - Use the reversefind API to give users booster perks in your game
 
 
+## Roblox Integration
+
+For those looking to integrate this feature within your Roblox games, we have created a special module to load into your places.
+All you need is to insert this line into a Script and the module will automatically load.
+Ensure that HTTP Service is enabled!
+
+```lua
+local Lightning = require(8947048183)("ApiKeyHere")
+```
+
+Refer to the endpoints in the next section for use methods
+
+
 # *Endpoints*
 
 ## Get Discord Boosts
@@ -157,12 +170,12 @@ local DiscordUser = Lightning:robloxToDiscord("82088531")
 ```javascript
 fetch(`https://api.lightningbot.net/v1/roblox/rank?key=X2y3t5O2l4owEIhahXvx`, {
   method: 'GET',
+  headers: { 'Content-Type':'application/json' },
   body: JSON.stringify({
     robloxId: "82088531",
     rankId: "254",
     guildId: "743236357274468483"
   })
-  headers: { 'Content-Type':'application/json' }
 }).then(response => response.json()).then(json => {
 
 })
