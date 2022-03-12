@@ -56,7 +56,7 @@ Refer to the endpoints in the next section for use methods
 
 #### Javascript
 ```javascript
-fetch(`https://api.lightningbot.net/v1/boosters/743236357274468483?key=X2y3t5O2l4owEIhahXvx`, {
+fetch(`https://api.lightningbot.net/v1/boosters/guildIdHere?key=apiKeyHere`, {
   method: 'GET',
   headers: { 'Content-Type':'application/json' }
 }).then(response => response.json()).then(json => {
@@ -65,8 +65,8 @@ fetch(`https://api.lightningbot.net/v1/boosters/743236357274468483?key=X2y3t5O2l
 ```
 #### Roblox Module
 ```lua
-local Lightning = require(8947048183)("X2y3t5O2l4owEIhahXvx")
-local BoosterArray = Lightning:retrieveBoosters("743236357274468483")
+local Lightning = require(8947048183)("apiKeyHere")
+local BoosterArray = Lightning:retrieveBoosters("guildIdHere")
 ```
 
 #### Example Success Response
@@ -112,7 +112,7 @@ local BoosterArray = Lightning:retrieveBoosters("743236357274468483")
 
 #### Javascript
 ```javascript
-fetch(`https://api.lightningbot.net/v1/verifications/82088531?key=X2y3t5O2l4owEIhahXvx`, {
+fetch(`https://api.lightningbot.net/v1/verifications/robloxUserIdHere?key=apiKeyHere`, {
   method: 'GET',
   headers: { 'Content-Type':'application/json' }
 }).then(response => response.json()).then(json => {
@@ -121,8 +121,8 @@ fetch(`https://api.lightningbot.net/v1/verifications/82088531?key=X2y3t5O2l4owEI
 ```
 #### Roblox Module
 ```lua
-local Lightning = require(8947048183)("X2y3t5O2l4owEIhahXvx")
-local DiscordUser = Lightning:robloxToDiscord("82088531")
+local Lightning = require(8947048183)("apiKeyHere")
+local DiscordUser = Lightning:robloxToDiscord("robloxUserIdHere")
 ```
 
 #### Example Success Response
@@ -168,13 +168,13 @@ local DiscordUser = Lightning:robloxToDiscord("82088531")
 
 #### Javascript
 ```javascript
-fetch(`https://api.lightningbot.net/v1/roblox/rank?key=X2y3t5O2l4owEIhahXvx`, {
+fetch(`https://api.lightningbot.net/v1/roblox/rank?key=apiKeyHere`, {
   method: 'GET',
   headers: { 'Content-Type':'application/json' },
   body: JSON.stringify({
-    robloxId: "82088531",
-    rankId: "254",
-    guildId: "743236357274468483"
+    robloxId: "robloxUserIdHere",
+    rankId: "rankIdHere",
+    guildId: "guildIdHere"
   })
 }).then(response => response.json()).then(json => {
 
@@ -182,8 +182,8 @@ fetch(`https://api.lightningbot.net/v1/roblox/rank?key=X2y3t5O2l4owEIhahXvx`, {
 ```
 #### Roblox Module
 ```lua
-local Lightning = require(8947048183)("X2y3t5O2l4owEIhahXvx")
-Lightning:setGroupRank("82088531", "743236357274468483", "254")
+local Lightning = require(8947048183)("apiKeyHere")
+Lightning:setGroupRank("robloxUserIdHere", "guildIdHere", "rankIdHere")
 ```
 
 #### Example Success Response
