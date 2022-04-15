@@ -66,7 +66,7 @@ fetch(`https://api.lightningbot.net/v1/boosters/guildIdHere?key=apiKeyHere`, {
 #### Roblox Module
 ```lua
 local Lightning = require(8947048183)("apiKeyHere")
-local BoosterArray = Lightning:retrieveBoosters("guildIdHere")
+local BoosterArray = Lightning:fetchBoostersFromGuild("guildIdHere")
 ```
 
 #### Example Success Response
