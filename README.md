@@ -122,7 +122,7 @@ fetch(`https://api.lightningbot.net/v1/verifications/robloxUserIdHere?key=apiKey
 #### Roblox Module
 ```lua
 local Lightning = require(8947048183)("apiKeyHere")
-local DiscordUser = Lightning:robloxToDiscord("robloxUserIdHere")
+local DiscordUser = Lightning:fetchDiscordFromRoblox("robloxUserIdHere")
 ```
 
 #### Example Success Response
