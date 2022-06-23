@@ -10,7 +10,7 @@ API Keys must be kept private and stored carefully.  We automatically generate y
 
 ## Ratelimits
 
-This is a paid product therefore we want to give users the most maximum and efficient number of requests possible.  Ratelimits are measured through Internet Protocols.  You can send 250 requests within a 10 second window.
+This is a paid product therefore we want to give users the most maximum and efficient number of requests possible.  Ratelimits are measured through Internet Protocols.  You can send 65 requests within a 1 minute window (this is measured per route).
 
 ## Support
 
